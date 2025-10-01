@@ -101,7 +101,7 @@ return 0;
 	            pms_new_data = 0;
 
 	            /* Mở file (chỉ dùng WRITE) */
-	            FR_Status = f_open(&Fil, "duy.txt", FA_WRITE | FA_READ | FA_CREATE_ALWAYS);
+	            FR_Status = f_open(&Fil, "duy.txt", FA_WRITE | FA_READ | FA_OPEN_ALWAYS);
 	            if (FR_Status == FR_OK) {
 	                /* Nhảy về cuối file */
 	                f_lseek(&Fil, f_size(&Fil));
@@ -199,4 +199,3 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
-
